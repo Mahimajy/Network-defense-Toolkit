@@ -1,0 +1,43 @@
+[
+  {
+    "timestamp": "2025-09-10T13:35:21.123456+0000",
+    "event_type": "alert",
+    "src_ip": "192.168.1.50",
+    "src_port": 42351,
+    "dest_ip": "192.168.1.12",
+    "dest_port": 80,
+    "proto": "TCP",
+    "alert": {
+      "action": "allowed",
+      "gid": 1,
+      "signature_id": 1000001,
+      "rev": 1,
+      "signature": "SURICATA SYN flood detected",
+      "category": "Potential DoS Attack",
+      "severity": 2
+    },
+    "flow_id": 987654321098765,
+    "in_iface": "eth0"
+  },
+  {
+    "timestamp": "2025-09-10T13:35:22.654321+0000",
+    "event_type": "alert",
+    "src_ip": "192.168.1.50",
+    "src_port": 42352,
+    "dest_ip": "192.168.1.12",
+    "dest_port": 80,
+    "proto": "TCP",
+    "alert": {
+      "action": "allowed",
+      "gid": 1,
+      "signature_id": 1000001,
+      "rev": 1,
+      "signature": "SURICATA SYN flood detected",
+      "category": "Potential DoS Attack",
+      "severity": 2
+    },
+    "flow_id": 987654321098766,
+    "in_iface": "eth0"
+  }
+]
+

@@ -1,0 +1,15 @@
+# Suricata Config (simplified)
+default-log-dir: /var/log/suricata/
+
+rule-files:
+  - suricata.rules
+  - local.rules
+
+outputs:
+  - eve-log:
+      enabled: yes
+      filetype: json
+      filename: eve.json
+      types:
+        - alert
+        - dns

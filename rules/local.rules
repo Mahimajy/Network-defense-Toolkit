@@ -1,0 +1,9 @@
+# --- Port Scan Defense (pfSense would block SYN packets) ---
+# In pfSense: Add a rule to block packets with TCP SYN flag and no ACK
+# (Documentation only, pfSense rules are not written in text files like Suricata)
+
+# --- SYN Flood Detection (Suricata Rule) ---
+alert tcp any any -> 192.168.10.10 80 (msg:"SYN Flood Detected"; flags:S; threshold:type both, track by_src, count 20, seconds 1; sid:1000001; rev:1;)
+
+# --- DNS Tunneling Detection (Suricata Rule) ---
+alert dns any any -> any any (msg:"Suspicious DNS Tunneling"; dns.query; pcre:"/.{50,}/"; sid:1000002; rev:1;)
